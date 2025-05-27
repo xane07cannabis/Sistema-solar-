@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema Solar - Información Completa</title>
+  <style>
+    /* Tema oscuro profundo espacial */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 20px 40px 20px;
+      background: radial-gradient(ellipse at center, #000005 0%, #000010 90%);
+      color: #bbb;
+      line-height: 1.6;
+      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      background-repeat: repeat;
+      background-size: auto;
+    }
+
+    h1, h2, h3 {
+      color: #a0d8ff;
+      text-shadow: 0 0 8px #0099ffaa;
+    }
+
+    a {
+      color: #66ccff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: rgba(5, 15, 35, 0.95);
+      padding: 20px 10px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px #0099ffcc;
+    }
+
+    main {
+      background: rgba(10, 20, 40, 0.9);
+      padding: 30px 35px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px #007accbb;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .planet-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 40px;
+      background: rgba(15, 30, 60, 0.7);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #0055aa88;
+      flex-wrap: wrap;
+    }
+
+    .planet-header img {
+      max-width: 240px;
+      border-radius: 12px;
+      box-shadow: 0 0 18px #66ccffaa;
+      flex-shrink: 0;
+    }
+
+    .details {
+      flex: 1 1 400px;
+      color: #ccc;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    table th, table td {
+      border: 1px solid #3377ccaa;
+      padding: 10px 14px;
+      text-align: left;
+      color: #ddd;
+    }
+
+    table th {
+      background-color: #2266ccbb;
+      color: #ddeeff;
+    }
+
+    input, textarea {
+      background: #111a28cc;
+      border: 1px solid #3399ffbb;
+      color: #cceeff;
+      border-radius: 7px;
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #3399ff;
+      color: #002244;
+      font-weight: 700;
+      border-radius: 8px;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 8px #55aaffcc;
+    }
+
+    button:hover {
+      background-color: #66bbff;
+      color: #001a33;
+      box-shadow: 0 0 14px #99ddffcc;
+    }
+
+    #mensaje {
+      color: #88ee88;
+      font-weight: 700;
+      margin-top: 12px;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      color: #5577aaaa;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .planet-header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .planet-header img {
+        max-width: 90%;
+      }
+
+      main {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sistema Solar - Información Completa</h1>
+    <input type="text" id="searchInput" placeholder="Buscar planeta, sol, astros..." />
+    <button onclick="buscar()">Buscar</button>
+  </header>
+
+  <main>
+    <!-- Planetas -->
+    <section id="mercurio">
+      <h2>Mercurio</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/mercury/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercurio" />
+        </a>
+        <div class="details">
+          <p>Mercurio es el planeta más cercano al Sol y el más pequeño del sistema solar. Su superficie rocosa está llena de cráteres debido a su falta de atmósfera densa que proteja de impactos. Debido a su proximidad al Sol, Mercurio tiene temperaturas extremas, con días muy calientes y noches heladas.</p>
+          <table>
+            <tr><th>Diámetro</th><td>4,879 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>57.9 millones km</td></tr>
+            <tr><th>Duración del día</th><td>59 días terrestres</td></tr>
+            <tr><th>Duración del año</th><td>88 días terrestres</td></tr>
+            <tr><th>Número de lunas</th><td>0</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="venus">
+      <h2>Venus</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/venus/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus" />
+        </a>
+        <div class="details">
+          <p>Venus es el segundo planeta desde el Sol y es conocido por su densa atmósfera compuesta principalmente de dióxido de carbono, lo que crea un efecto invernadero extremo y temperaturas superficiales que pueden derretir plomo. Su superficie está cubierta por volcanes y vastas planicies.</p>
+          <table>
+            <tr><th>Diámetro</th><td>12,104 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>108.2 millones km</td></tr>
+            <tr><th>Duración del día</th><td>243 días terrestres</td></tr>
+            <tr><th>Duración del año</th><td>225 días terrestres</td></tr>
+            <tr><th>Número de lunas</th><td>0</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="tierra">
+      <h2>Tierra</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/earth/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" alt="Tierra" />
+        </a>
+        <div class="details">
+          <p>La Tierra es el tercer planeta desde el Sol y el único conocido en albergar vida. Su atmósfera rica en oxígeno, la presencia de agua líquida y una temperatura moderada permiten que exista una gran diversidad de seres vivos y ecosistemas.</p>
+          <table>
+            <tr><th>Diámetro</th><td>12,742 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>149.6 millones km</td></tr>
+            <tr><th>Duración del día</th><td>24 horas</td></tr>
+            <tr><th>Duración del año</th><td>365.25 días</td></tr>
+            <tr><th>Número de lunas</th><td>1 (La Luna)</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="marte">
+      <h2>Marte</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/mars/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Marte" />
+        </a>
+        <div class="details">
+          <p>Marte, conocido como el planeta rojo, es el cuarto planeta desde el Sol. Tiene una superficie rocosa con grandes volcanes, cañones y casquetes polares. Su atmósfera es delgada y principalmente de dióxido de carbono, con evidencia de agua en forma de hielo bajo la superficie.</p>
+          <table>
+            <tr><th>Diámetro</th><td>6,779 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>227.9 millones km</td></tr>
+            <tr><th>Duración del día</th><td>24.6 horas</td></tr>
+            <tr><th>Duración del año</th><td>687 días terrestres</td></tr>
+            <tr><th>Número de lunas</th><td>2 (Fobos y Deimos)</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="jupiter">
+      <h2>Júpiter</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Júpiter" />
+        </a>
+        <div class="details">
+          <p>Júpiter es el planeta más grande del Sistema Solar. Es un gigante gaseoso con una atmósfera compuesta principalmente por hidrógeno y helio. Tiene una gran mancha roja, que es una tormenta gigante que ha durado cientos de años, y una gran cantidad de lunas, incluyendo a Ganímedes, la luna más grande del sistema.</p>
+          <table>
+            <tr><th>Diámetro</th><td>139,820 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>778.5 millones km</td></tr>
+            <tr><th>Duración del día</th><td>9.9 horas</td></tr>
+            <tr><th>Duración del año</th><td>11.86 años terrestres</td></tr>
+            <tr><th>Número de lunas</th><td>79 conocidas</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="saturno">
+      <h2>Saturno</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/saturn/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturno" />
+        </a>
+        <div class="details">
+          <p>Saturno es famoso por sus impresionantes anillos compuestos de hielo y roca. Es un gigante gaseoso con una atmósfera principalmente de hidrógeno y helio. Además de sus anillos, posee numerosas lunas, siendo Titán la más grande y con una atmósfera densa.</p>
+          <table>
+            <tr><th>Diámetro</th><td>116,460 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>1,434 millones km</td></tr>
+            <tr><th>Duración del día</th><td>10.7 horas</td></tr>
+            <tr><th>Duración del año</th><td>29.46 años terrestres</td></tr>
+            <tr><th>Número de lunas</th><td>83 conocidas</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="urano">
+      <h2>Urano</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/uranus/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Urano" />
+        </a>
+        <div class="details">
+          <p>Urano es un gigante gaseoso conocido por su color azul verdoso debido al metano en su atmósfera. Tiene una inclinación axial extrema, lo que significa que gira casi de lado. Posee un sistema de anillos tenues y varias lunas.</p>
+          <table>
+            <tr><th>Diámetro</th><td>50,724 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>2,871 millones km</td></tr>
+            <tr><th>Duración del día</th><td>17.2 horas</td></tr>
+            <tr><th>Duración del año</th><td>84 años terrestres</td></tr>
+            <tr><th>Número de lunas</th><td>27 conocidas</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="neptuno">
+      <h2>Neptuno</h2>
+      <div class="planet-header">
+        <a href="https://solarsystem.nasa.gov/planets/neptune/overview/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Neptuno" />
+        </a>
+        <div class="details">
+          <p>Neptuno es el planeta más lejano del Sol en el Sistema Solar conocido. Es un gigante gaseoso azul con vientos extremadamente rápidos y una atmósfera de hidrógeno, helio y metano. Posee varias lunas, siendo Tritón la más grande.</p>
+          <table>
+            <tr><th>Diámetro</th><td>49,244 km</td></tr>
+            <tr><th>Distancia al Sol</th><td>4,495 millones km</td></tr>
+            <tr><th>Duración del día</th><td>16.1 horas</td></tr>
+            <tr><th>Duración del año</th><td>165 años terrestres</td></tr>
+            <tr><th>Número de lunas</th><td>14 conocidas</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Otros componentes del Sistema Solar -->
+    <section id="otros">
+      <h2>Otros componentes del Sistema Solar</h2>
+      <p>El Sistema Solar incluye, además de los planetas, una variedad de cuerpos celestes importantes:</p>
+      <ul>
+        <li><strong>Asteroides:</strong> Rocas y metales que orbitan mayormente en el cinturón de asteroides entre Marte y Júpiter.</li>
+        <li><strong>Cometas:</strong> Cuerpos compuestos de hielo, polvo y rocas que desarrollan colas visibles cuando se acercan al Sol.</li>
+        <li><strong>Satélites naturales:</strong> Lunas que orbitan alrededor de los planetas.</li>
+        <li><strong>Cinturón de Kuiper:</strong> Región más allá de Neptuno con objetos helados y enanas como Plutón.</li>
+        <li><strong>Nube de Oort:</strong> Esfera hipotética que rodea el Sistema Solar, origen de cometas de período largo.</li>
+      </ul>
+    </section>
+
+    <!-- Otros astros de la galaxia -->
+    <section id="galaxia">
+      <h2>Otros astros en nuestra galaxia</h2>
+      <p>Nuestra galaxia, la Vía Láctea, contiene billones de estrellas y una gran diversidad de cuerpos celestes, entre ellos:</p>
+      <ul>
+        <li><strong>Estrellas:</strong> Cuerpos luminosos de plasma que generan energía por fusión nuclear, como nuestro Sol.</li>
+        <li><strong>Nebulosas:</strong> Nubes gigantes de gas y polvo donde nacen nuevas estrellas.</li>
+        <li><strong>Agujeros negros:</strong> Regiones con gravedad tan intensa que nada puede escapar de ellas.</li>
+        <li><strong>Supernovas:</strong> Explosiones de estrellas masivas al final de su vida.</li>
+      </ul>
+      <p>Para profundizar, visita la <a href="https://www.nasa.gov/mission_pages/hubble/story/index.html" target="_blank" rel="noopener">página oficial de la NASA sobre el universo</a>.</p>
+    </section>
+
+    <!-- Video explicativo -->
+    <section id="video">
+      <h2>Video explicativo sobre el Sistema Solar</h2>
+      <iframe width="100%" height="450" src="https://www.youtube.com/embed/libKVRa01L8" title="Video del Sistema Solar" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Sección para calificar la página -->
+    <section id="calificacion">
+      <h2>Califica esta página</h2>
+      <form id="ratingForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+        
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+        
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí tus comentarios..."></textarea>
+        
+        <label for="rating">Puntuación:</label>
+        <select id="rating" name="rating" required>
+          <option value="">Selecciona...</option>
+          <option value="5">★★★★★ Excelente</option>
+          <option value="4">★★★★ Muy bueno</option>
+          <option value="3">★★★ Bueno</option>
+          <option value="2">★★ Regular</option>
+          <option value="1">★ Malo</option>
+        </select>
+        
+        <button type="submit">Enviar valoración</button>
+      </form>
+      <p id="mensaje"></p>
+    </section>
+
+    <!-- Botón para ir a otra página del universo -->
+    <section id="otraPagina" style="margin-top:40px; text-align:center;">
+      <button onclick="window.location.href='https://es.nasa.gov/'">Explorar más del Universo (NASA)</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sistema Solar - Información confiable y actualizada. Fuentes: NASA, Wikipedia, National Geographic.</p>
+  </footer>
+
+  <script>
+    // Buscar sección según palabra clave y hacer scroll
+    function buscar() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      if (!input) {
+        alert('Por favor ingresa un término para buscar.');
+        return;
+      }
+      const secciones = document.querySelectorAll('main section');
+      let encontrado = false;
+      secciones.forEach(sec => {
+        if (sec.id && sec.id.includes(input)) {
+          sec.scrollIntoView({ behavior: 'smooth' });
+          encontrado = true;
+        }
+      });
+      if (!encontrado) {
+        alert('No se encontró la sección para "' + input + '". Prueba con nombres de planetas o temas como "otros" o "galaxia".');
+      }
+    }
+
+    // Manejar envío del formulario de valoración
+    document.getElementById('ratingForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const rating = document.getElementById('rating').value;
+      if (!nombre || !email || !rating) {
+        alert('Por favor completa los campos obligatorios.');
+        return;
+      }
+      // Aquí podrías enviar los datos a un servidor o guardarlos, pero aquí solo mostraremos mensaje:
+      document.getElementById('mensaje').textContent = `Gracias, ${nombre}, por tu valoración de ${rating} estrellas.`;
+      this.reset();
+    });
+  </script>
+</body>
+</html>
